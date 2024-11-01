@@ -1,0 +1,58 @@
+/* src/SponsorCard.css */
+.sponsor-section {
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #1F2937; /* Dark background for the section */
+  color: #fff; /* White text color for better contrast */
+}
+
+.sponsor-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between cards */
+}
+
+.sponsor-card {
+  position: relative; /* Position relative for absolute positioning of pseudo-element */
+  background-color: #ffffff; /* Light background for individual cards */
+  border-radius: 8px;
+  padding: 10px;
+  width: 150px; /* Fixed width for cards */
+  height:150px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s; /* Transition for transform */
+  color: #000; /* Dark text color for card content */
+  margin: 20px; /* Margin to create space around the card */
+  align-items: center;
+}
+
+.sponsor-card::before {
+  content: '';
+  position: absolute;
+  top: -10px; /* Positioning above the card */
+  left: -10px; /* Positioning to the left of the card */
+  right: -10px; /* Positioning to the right of the card */
+  bottom: -10px; /* Positioning below the card */
+  border: 2px solid rgba(228, 167, 75, 0); /* Start with a transparent border */
+  border-radius: 10px; /* Slightly larger border radius for the outer border */
+  transition: border-color 0.3s; /* Transition for border color */
+  z-index: -1; /* Ensure the pseudo-element is behind the card */
+}
+
+.sponsor-card:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+.sponsor-card:hover::before {
+  border-color: rgb(228, 167, 75); /* Change border color on hover */
+}
+
+.sponsor-logo {
+  
+  width: 50%; /* Responsive logo */
+  height: auto; /* Maintain aspect ratio */
+}

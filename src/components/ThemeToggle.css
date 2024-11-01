@@ -1,0 +1,13 @@
+.theme-toggle {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--gray-800);
+  border: none;
+  color: var(--gray-400);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--gray-600);
+}

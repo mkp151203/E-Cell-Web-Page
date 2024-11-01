@@ -1,0 +1,64 @@
+.event-card {
+  background-color: #111827; /* Light gray background */
+  border-radius: 8px;
+  box-shadow: 0 0px 6px rgba(255, 255, 255, 0.541);
+  padding: 24px;
+  transition: height 0.3s ease, box-shadow 0.3s ease;
+  height: 150px; /* Set initial height */
+  position: relative; /* Ensure proper positioning */
+  overflow: hidden; /* Hide overflow content */
+
+}
+
+.event-card:hover {
+  height: 350px; /* Increase height on hover */
+  box-shadow: 0px 0px 20px rgba(253, 251, 251, 0.507);
+  background-color: #111827; /* Darker gray on hover */
+}
+
+.event-icon {
+  background-color: #ebf8ff38; /* Light blue for icon background */
+  border-radius: 50%;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.event-title {
+  font-size: 1.25rem; /* Title size */
+  font-weight: 600;
+  margin-top: 10px;
+  color: #d8a952; /* Dark text for title */
+}
+
+.event-description {
+  margin-top: 8px;
+  color: white; /* gray-600 for description */
+  height: 0; /* Start with height 0 */
+  opacity: 0; /* Start with invisible */
+  transition: height 0.3s ease, opacity 0.3s ease; /* Transition for height and opacity */
+  overflow: hidden; /* Hide overflow */
+}
+
+.event-card:hover .event-description {
+  height: auto; /* Allow height to adjust on hover */
+  opacity: 1; /* Make visible on hover */
+  margin-top: 8px; /* Add some space on hover */
+}
+
+.event-date {
+  margin-top: 16px;
+  font-weight: 500;
+  color: #fcfcfc; /* Dark text for date */
+  opacity: 0;
+  transition: height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.event-card:hover .event-date {
+  height: auto; /* Allow height to adjust on hover */
+  opacity: 1; /* Make visible on hover */
+  margin-top: 8px; /* Add some space on hover */
+}
